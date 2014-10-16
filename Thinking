@@ -1,0 +1,72 @@
+WHEN YOU USE ICON THERE IS A CHANCE YOU GET THE UNDERLINE IF YOU DO THIS IS THE SOLUTION 
+
+
+a:hover i[class^="icon-"],
+a:hover i[class*=" icon-"]{
+   text-decoration: none;
+}
+
+
+WHEN YOU NEED TO CENTER VERTICALLY AND HORIZONTALLY AN ICON INSIDE A PARENT DIV NO WORRIES
+YOU DONT NEED TO ID THE WIDTH OR HEIGHT SUPER MODERN APPROACH HERE IS THE ACTUAL CODE AND BELOW BELOW IS
+THE CODE BEING USED WITH AN ICON
+
+
+.verticalElement{
+ position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+-webkit-transform:translateY(-50%);
+-moz-transform:translateY(-50%);
+-ms-transform:translateY(-50%);
+-o-transform:translateY(-50%);
+transform:translateY(-50%);
+}
+
+
+/*----------------------
+----- BOXPLUS ----
+------------------------*/
+
+.icon-boxplus{
+ position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+-webkit-transform:translateY(-50%);
+-moz-transform:translateY(-50%);
+-ms-transform:translateY(-50%);
+-o-transform:translateY(-50%);
+transform:translateY(-50%);
+}
+
+.icon-boxplus:before {
+	content: "\e609";
+	
+	font-size: 96px;
+  color: #05cafc;
+  margin:0 auto;
+  text-shadow: 0px 1px 1px #000000; 
+}
+
+.icon-boxplus:hover:before {
+  opacity:0.5;
+  color: #000;
+  text-shadow: 0px 1px 1px #05cafc;
+ 
+}
+
+
+ADD THIS ETRA BIT TO THE PARENT OF THE ICON TO PREVENT A RUMOR OF BLURRY LOOKING ARTIFACTS 
+
+
+
+.parent div{
+
+ /* these additional setting are to perserve 3d ..basically it helps
+    the icons nested inside this div look better*/
+    -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+
